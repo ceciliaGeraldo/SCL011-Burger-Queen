@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import { useFirebaseApp } from "reactfire";
+import LunchMenu from './views/LunchMenu';
+import BreakfastMenu from './views/BreakfastMenu'
 
 function App() {
   const firebase = useFirebaseApp();
@@ -8,17 +10,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        
+        <BreakfastMenu />
+        <LunchMenu />
       </header>
     </div>
   );
