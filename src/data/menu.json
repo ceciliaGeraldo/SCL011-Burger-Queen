@@ -1,0 +1,113 @@
+
+{
+    "Breakfast": [
+      {
+        "id" : 1,
+        "name" : "Café americano",
+        "price" : 500,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      },
+      {
+        "id" : 2,
+        "name" : "Café con leche",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "url"
+        
+  
+      },
+      {
+        "id" : 3,
+        "name" : "Sandwich de jamón y queso",
+        "price" : 1000,
+        "category": "Comida",
+        "img" : "url"
+  
+      },
+      {
+        "id" : 4,
+        "name" : "Jugo de fruta natural",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      }
+    ],
+  
+  
+    "Lunch": [
+      {
+        "id" : 5,
+        "name": "Hamburguesa Simple",
+        "price" : 1000,
+        "category": "Comida",
+        "protein" : [ "Vacuno", "Pollo", "Veggie"],
+        "img" : "url"
+  
+      },
+      
+      {
+        "id" : 6,
+        "name": "Hamburguesa Doble",
+        "price" : 1500,
+        "category": "Comida",
+        "protein" : [ "Vacuno", "Pollo", "Veggie"],
+        "img" : "url"
+  
+      },
+      {
+        "id" : 7,
+        "name": "Papas fritas",
+        "price" : 500,
+        "category": "Agregados",
+        "img" : "url"
+  
+      },{
+        "id" : 8,
+        "name": "Aros de Cebolla",
+        "price" : 500,
+        "category": "Agregados",
+        "img" : "url"
+  
+      },
+      {
+        "id" : 9,
+        "name": "Agua 500ml",
+        "price" : 500,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      },    
+      {
+        "id" : 10,
+        "name": "Agua 750ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 500ml",
+        "price" : 700,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      },
+      {
+        "id" : 11,
+        "name": "Bebida 750ml",
+        "price" : 1000,
+        "category": "Bebestible",
+        "img" : "url"
+  
+      }
+      
+    ]
+  
+  
+  }
+  
+  
