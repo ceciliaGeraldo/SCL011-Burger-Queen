@@ -17,11 +17,11 @@ class ProductMenu extends Component {
         const itemName= this.props.name;
         const itemPrice= this.props.price;
         const itemCategory = this.props.category;
-        console.log(itemName, itemPrice);
+        console.log(itemName, itemPrice, itemCategory);
     }
 
     render(){
-        
+
     return (
             <button className = '' onClick={this.handleClick} >
                 <img src={this.props.img} alt="menu icon" className=""/>

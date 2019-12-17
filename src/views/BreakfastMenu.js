@@ -8,7 +8,7 @@ const Drinks = () => {
   return (
     <div>
         <h2>Bebidas</h2>
-      {data.Breakfast.map((products, i) => {
+      {data.Breakfast.map((products) => {
         if (products.category === "Bebestible") {
           return (
             <React.Fragment>
@@ -31,7 +31,7 @@ const Food = () => {
     return (
       <div>
           <h2>Comida</h2>
-        {data.Breakfast.map((products, i) => {
+        {data.Breakfast.map((products) => {
           if (products.category === "Comida") {
             return (
               <React.Fragment>
