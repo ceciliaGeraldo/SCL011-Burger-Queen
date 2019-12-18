@@ -1,20 +1,23 @@
 import React from "react";
 import "./App.css";
 import { useFirebaseApp } from "reactfire";
-import LunchMenu from './views/LunchMenu';
-import BreakfastMenu from './views/BreakfastMenu'
+import LunchMenu from "./views/LunchMenu";
+import BreakfastMenu from "./views/BreakfastMenu";
+import Home from "./views/Home";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function App() {
   const firebase = useFirebaseApp();
   console.log(firebase);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        
-        <BreakfastMenu />
-        <LunchMenu />
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Home />
+        </header>
+      </div>
+    </Router>
   );
 }
 

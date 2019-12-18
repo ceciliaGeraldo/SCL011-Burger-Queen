@@ -9,14 +9,15 @@ class ProductMenu extends Component {
             name: "",
             price: "",
             category: "",
+            quantity: 0,
         }
         this.handleClick= this.handleClick.bind(this)
     }
-
     handleClick () {
         const itemName= this.props.name;
         const itemPrice= this.props.price;
         const itemCategory = this.props.category;
+        
         console.log(itemName, itemPrice, itemCategory);
     }
 
