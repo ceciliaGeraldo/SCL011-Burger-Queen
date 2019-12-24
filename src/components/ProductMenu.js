@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-
 class ProductMenu extends Component {
     constructor (){
         super();
