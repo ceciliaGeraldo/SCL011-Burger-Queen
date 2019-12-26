@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ProductMenu from "../components/ProductMenu";
+import './BreakfastMenu.css';
 
 //impotar data json
 import data from "../data/menu.json";
@@ -7,17 +8,16 @@ import data from "../data/menu.json";
 const Drinks = () => {
   return (
     <div>
-        <h2>Bebidas</h2>
+        <h2 className="categories">Bebidas</h2>
       {data.Breakfast.map((products) => {
         if (products.category === "Bebestible") {
           return (
-            <React.Fragment>
+            <React.Fragment className="containerMenu">
               <ProductMenu
                 key={products.id}
                 name={products.name}
                 price={products.price}
                 img={products.img}
-                category={products.category}
               />
             </React.Fragment>
           );

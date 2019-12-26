@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './ProductMenu.css';
 
 class ProductMenu extends Component {
     constructor (){
@@ -20,14 +20,15 @@ class ProductMenu extends Component {
         
         console.log(itemName, itemPrice, itemCategory);
     }
+    
 
     render(){
 
     return (
-            <button className = '' onClick={this.handleClick} >
-                <img src={this.props.img} alt="menu icon" className=""/>
-                <div className=''><p>{this.props.name}</p></div>
-                <div className=''><p>{this.props.price}</p></div>
+            <button className = 'cardMenu' onClick={this.handleClick} >
+                <img src={this.props.img} alt="menu icon" className="imgMenu"/>
+                <div className='name'><span>{this.props.name}</span></div>
+                <div className='price'><span>{this.props.price}</span></div>
             </button>
     )   
     }

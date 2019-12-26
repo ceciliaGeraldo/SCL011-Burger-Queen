@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { useFirebaseApp } from "reactfire";
-import LunchMenu from "./views/LunchMenu";
-import BreakfastMenu from "./views/BreakfastMenu";
+//import LunchMenu from "./views/LunchMenu";
+//import BreakfastMenu from "./views/BreakfastMenu";
 import Home from "./views/Home";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="root">
         <header className="App-header">
           <Home />
         </header>
