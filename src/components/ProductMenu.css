@@ -1,32 +1,18 @@
-
-/* TARJETAS DE MENÚ */
-.cardMenu{
-    width: 120px;
-    height: 150px;
-    margin-right: 10px;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    border: none;
-}
-
-.cardMenu:hover{
-    background-color: #FD7D00;
-}
-
-.imgMenu{
-    margin: 0px;
-    width: 100px;
-}
-
-.name{
-    margin: 0px;
-    font-size: 10px;
+/* CATEGORIAS DEL MENÚ */
+.categories{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;
     color: #232323;
+    margin-top: 30px;
 }
-
-.price{
-    margin: 5px;
-    font-size: 12px;
-    color: #0061BF;
+/* BARRA MEDIA BLANCA QUE CONTIENE EL MENÚ */
+.containerMenu{
+    width: 60%;
+    padding-left: 4%;
+    padding-right: 3%;
+    padding-top: 5%;
+    background-color: white;
+    border-bottom-left-radius: 20px;
 }
