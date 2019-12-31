@@ -1,46 +1,78 @@
 import React, { Component } from "react";
 import ProductMenu from "../components/ProductMenu";
+import './BreakfastMenu.css';
 
 //impotar data json
 import data from "../data/menu.json";
+
+const Drinks = () => {
+  return (
+    <div>
+        <h2 className="categories">Bebidas</h2>
+      {data.Breakfast.map((products) => {
+        if (products.category === "Bebestible") {
+          return (
+            <React.Fragment className="containerMenu">
+              <ProductMenu
+                key={products.id}
+                name={products.name}
+                price={products.price}
+                img={products.img}
+              />
+            </React.Fragment>
+          );
+        }
+      })}
+    </div>
+  );
+};
+
+const Food = () => {
+    return (
+      <div>
+          <h2>Comida</h2>
+        {data.Breakfast.map((products) => {
+          if (products.category === "Comida") {
+            return (
+              <React.Fragment>
+                <ProductMenu
+                  key={products.id}
+                  name={products.name}
+                  price={products.price}
+                  img={products.img}
+                  category={products.category}
+                />
+              </React.Fragment>
+            );
+          }
+        })}
+      </div>
+    );
+  };
 
 class BreakfastMenu extends Component {
   constructor() {
     super();
     this.state = {
-      menu: data,
+      menu: data
     };
   }
   getProductNameAndPrice(i) {
     let productName = i.name;
     let productPrice = i.price;
-    console.log(productName, productPrice);
-  }
-  getCategory(i){
-      let productCategory = i.category;
-      console.log(productCategory);
+    let productCategory = i.category;
+    console.log(productName, productPrice, productCategory);
   }
 
   render() {
     return (
-    <React.Fragment>
+      <React.Fragment>
         <h1>Desayuno</h1>
-    <div className="">
-        {this.state.menu.Breakfast.map(i => (
-            
-            
-          <ProductMenu
-            onClick={this.getProductNameAndPrice(i)}
-            key={i.id}
-            name={i.name}
-            price={i.price}
-            img={i.img}
-            category={i.category}
-          />
-        ))}
-      </div>
-    </React.Fragment>
-  
+        <div className="">
+          <Drinks />
+          <Food />
+        </div>
+      </React.Fragment>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './ProductMenu.css';
 
 class ProductMenu extends Component {
     constructor (){
@@ -6,23 +7,28 @@ class ProductMenu extends Component {
         this.state = {
             orders: [],
             name: "",
-            price: ""
+            price: "",
+            category: "",
+            quantity: 0,
         }
         this.handleClick= this.handleClick.bind(this)
     }
-
     handleClick () {
         const itemName= this.props.name;
         const itemPrice= this.props.price;
-        console.log(itemName, itemPrice);
+        const itemCategory = this.props.category;
+        
+        console.log(itemName, itemPrice, itemCategory);
     }
+    
 
     render(){
+
     return (
-            <button className = '' onClick={this.handleClick} >
-                <img src={this.props.img} alt="menu icon" className="item-img"/>
-                <div className=''><p>{this.props.name}</p></div>
-                <div className=''><p>{this.props.price}</p></div>
+            <button className = 'cardMenu' onClick={this.handleClick} >
+                <img src={this.props.img} alt="menu icon" className="imgMenu"/>
+                <div className='name'><span>{this.props.name}</span></div>
+                <div className='price'><span>{this.props.price}</span></div>
             </button>
     )   
     }
