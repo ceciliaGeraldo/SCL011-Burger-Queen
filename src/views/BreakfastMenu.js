@@ -18,6 +18,7 @@ const Drinks = () => {
                 name={products.name}
                 price={products.price}
                 img={products.img}
+                category={products.category}
               />
             </React.Fragment>
           );
