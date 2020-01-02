@@ -7,6 +7,10 @@ Hoy en día el desarrollo de tecnologías para hacer más expeditos los servicio
 
 El objetivo principal de este proyecto es elaborar un sistema web eficiente para el funcionamiento de la cadena de pedidos dentro de un restaurant usando un framework, en este caso **React**. Este sistema está diseñado exclusivamente para dos usuarios, el/la mesero/a y para el/la jefe de cocina; ambos deben interactuar con la pantalla de un dispositivo (tablet) tanto para realizar los pedidos o marcar los estados de estos. Por esta misma razón, el diseño de la interfaz es muy importante, ya que debe ser intuitiva y rápida de manejar.
 
+## Flujo Inicial
+
+<a href="https://imgbb.com"><img alt="flujo img" src="https://i.ibb.co/5WCs4wx/Burger-Queen-2.jpg"></a>
+
 ## Historias de Usuario
 
 En este proyecto es primordial el trabajo por historias de usuario, ya que, cada tarea debe funcionar a la perfección para que el sistema se completamente eficiente.
@@ -71,3 +75,39 @@ Pantalla donde se presiona el botón de ticket bajo uno de los pedidos, indicand
 
 <a  href="https://imgbb.com"><img  src="https://i.ibb.co/4tzPc8w/alta015.png"  alt="primera pantalla"></a>
 Pantalla donde se visualiza la barra amarilla lateral derecha con el pedido en estado **"Servir"**. En la pantalla general aún se visualizan los dos pedidos que están en preparación.
+
+## Test de Usabilidad
+
+Luego de la realización del diseño, hemos realizado test de usabilidad a dos trabajadores de una cafetería. Los cuales ambos cumplían la labor de cocina como también de mesero según variara su turno.
+
+El test se llevó a cabo en 2 minutos por rol (_mesero y cocina_) desde una tablet, teniendo como objetivo que el usuario pudiese interactuar _en tiempo real_ y observar cuál era su reacción al relacionarse con nuestra plataforma.
+
+Dentro de estos dos minutos, se le pidió al usuario que completara las siguientes acciones:
+
+- _Ingresar a la vista mesero_
+- _Ingresar producto a la orden_
+- _Ver productos de ambos menú_
+- _Completar la orden enviando pedid a cocina_
+
+Al observar al usuario interactuando pudimos observar que la navegación a través de la aplicación fue plenamente intuitivo. Cuando le pedíamos ejecutar alguna acción sabía donde dirigirse en el espacio de la pantalla y no tuvo confusiones dentro del test.
+
+Testimonio del usuario: _"Me gustaron mucho los colores, son muy llamativos y a su vez muy ordenado. No sobrecarga la pantalla de información a pesar de tener todo lo necesario dentro de una misma pantalla. Se siente rápido para usarlo en la práctica, me gustaría que los nombres de los productos resaltaran más."_
+
+
+#### Iteración
+
+- A partir del testimonio de los usuarios, iteramos en diseño modificando el tamaño de los nombres de los productos.
+
+## Planificación
+
+
+<a href="https://imgbb.com"><img alt="project-preview" src="https://i.ibb.co/RSHnHKG/Screen-Shot-2020-01-02-at-09-52-18.png"></a>
+
+Para este proyecto, hemos decidido utilizar "_Projects_" de GitHub, organiznado la planificación en Milestones e Issues cada historia de usuario, así emplear metodologías ágiles en el desarrollo de nuestra plataforma.
+
+<a href="https://imgbb.com"><img src="https://i.ibb.co/Phbz959/Screen-Shot-2020-01-02-at-09-55-27.png" alt="planificacion-preview"></a>
+
+
+
+
+
