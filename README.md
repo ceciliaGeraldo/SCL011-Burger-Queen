@@ -1,68 +1,73 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Burguer Queen
 
-## Available Scripts
+Hoy en día el desarrollo de tecnologías para hacer más expeditos los servicios es fundamental, por lo que, dentro de un restaurant surge la necesidad de elaborar un sistema que acelere y haga más eficiente la tarea de realizar pedidos, enviarlos a cocina y entregarlos a sus respectivas mesas.
 
-In the project directory, you can run:
 
-### `npm start`
+## Objetivo del proyecto 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El objetivo principal de este proyecto es elaborar un sistema web eficiente para el funcionamiento de la cadena de pedidos dentro de un restaurant usando un framework, en este caso **React**. Este sistema está diseñado exclusivamente para dos usuarios, el/la mesero/a y para el/la jefe de cocina; ambos deben interactuar con la pantalla de un dispositivo (tablet) tanto para realizar los pedidos o marcar los estados de estos. Por esta misma razón, el diseño de la interfaz es muy importante, ya que debe ser intuitiva y rápida de manejar.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Historias de Usuario
 
-### `npm test`
+En este proyecto es primordial el trabajo por historias de usuario, ya que, cada tarea debe funcionar a la perfección para que el sistema se completamente eficiente.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Historia de usuario 1: Mesero/a debe poder tomar pedido de cliente** 
+>Yo como mesero/a quiero tomar el pedido de un cliente para no depender de mi mala memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y que se puedan ir preparando en orden.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-  **Historia de usuario 2: Jefe de cocina debe ver los pedidos** 
+> Yo como jefe/a de cocina quiero ver los pedidos de los clientes en orden y marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs que un pedido está listo para servirlo a un cliente.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-  **Historia de usuario 3: Meserx debe ver pedidos listos para servir** 
+> Yo como mesero/a quiero ver los pedidos que están preparados para entregarlos rápidamente a los clientes que las hicieron.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Proceso de diseño
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Para el diseño de la interfaz, nos centramos en un formato de tablet apaisado, ya que encontramos que de esta manera los elementos tenían una mejor disposición para la navegación del usuario. Para poder determinar la ubicación de los elementos, el tamaño de las fuentes y la navegación, en una primera instancia hicimos un prototipo de baja fidelidad.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prototipo de Baja Fidelidad
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/tm91W8f/baja01.png"  alt="Primera pantalla"></a>
+En esta primera pantalla, el usuario elige como ingresar a la aplicación, como mesero/a o jefe/a de cocina.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/dKqjmPf/baja02.png"  alt="Segunda pantalla"></a>
+En el caso de haber elegido **"Mesero/a"** , el navegador abre el menú de desayuno o almuerzo, según la opción que elija el usuario. En esta pantalla se visualiza el menú de desayuno, en donde se muestran las opciones del menú en tarjetas individuales, una barra lateral derecha en donde se muestra el detalle del pedido que se esta haciendo, y una barra lateral izquierda en donde se muestra el estado de pedidos realizados, estos puedes ser **"en cocina"**, **"listos para servir"** o **"entregados"**.
 
-## Learn More
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/BCj9XpV/baja03.png"  alt="Tercera pantalla"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+En esta pantalla se muestra el menú de almuerzo, con las distantas opciones en tarjetas individuales. Cabe destacar que en la barra lateral derecha, donde sale el detalle del pedido que se esta realizando, también encontramos dos inputs en donde se ingresa el nombre del cliente y su número de mesa, para que luego el mesero no tenga confusión al servirlos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/dg1myC1/baja04.png"  alt="Cuarta pantalla"></a>
 
-### Code Splitting
+En el caso de haber elegido **"Jefe/a de cocina"**, se abre esta pantalla en donde sale el detalle de los pedidos realizados por el/la mesero/a y  un contador sobre cada pedido, del tiempo que demora desde que entra a cocina, hasta que se marca como pedido listo para ser retirado y entregado. El contador se detiene al momento de presionar sobre el botón con un "ticket" bajo cada pedido, luego el pedido pasa a una barra lateral derecha, que podrá visualizar el/la mesero/a, detallando el estado del pedido.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Prototipo de Alta Fidelidad
+A continuación veremos imágenes de las pantalla definitivas, con diseño, colores y tipografías escogidas para la interfaz de este sistema de pedidos.
 
-### Analyzing the Bundle Size
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/S04TSLD/alta01.png"  alt="primera pantalla"></a>
+Pantalla inicial de la aplicación.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/DrDKZ9S/alta02.png"  alt="primera pantalla"></a>
+Pantalla inicial de Mesero/a.
 
-### Making a Progressive Web App
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/k8d7TbP/alta03.png"  alt="primera pantalla"></a>
+Pantalla menú desayuno.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/1Mjq9Nk/alta05.png"  alt="primera pantalla"></a>
+Pantalla menú desayuno, donde se detalla el pedido realizado en la barra azul lateral derecha, con el botón presionado con el pedido listo para enviar a cocina.
 
-### Advanced Configuration
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/GRRk1GL/alta07.png"  alt="primera pantalla"></a>
+Pantalla menú almuerzo. En la barra amarilla lateral izquierda, se puede ver un pedido en estado **" Servir"**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/pw7YLJG/alta09.png"  alt="primera pantalla"></a>
+Pantalla menú almuerzo en donde se da la opción para elegir una de las tres proteínas posibles para la hamburguesa.
 
-### Deployment
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/0F3Xxkm/alta013.png"  alt="primera pantalla"></a>
+Pantalla inicial **" Jefe/a de cocina"** en donde ya hay tres pedidos realizados que están en proceso de preparación.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/z5JsMw1/alta014.png"  alt="primera pantalla"></a>
+Pantalla donde se presiona el botón de ticket bajo uno de los pedidos, indicando un cambio de estado, ahora el pedido pasa al estado **"Servir"**.
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<a  href="https://imgbb.com"><img  src="https://i.ibb.co/4tzPc8w/alta015.png"  alt="primera pantalla"></a>
+Pantalla donde se visualiza la barra amarilla lateral derecha con el pedido en estado **"Servir"**. En la pantalla general aún se visualizan los dos pedidos que están en preparación.
