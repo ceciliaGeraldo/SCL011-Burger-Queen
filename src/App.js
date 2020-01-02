@@ -5,6 +5,8 @@ import { useFirebaseApp } from "reactfire";
 //import BreakfastMenu from "./views/BreakfastMenu";
 import Home from "./views/Home";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+//import React, {Component} from "react";
+//import Container from "./Componentes/CentralWhiteMenu.js";
 
 function App() {
   const firebase = useFirebaseApp();
@@ -20,5 +22,14 @@ function App() {
     </Router>
   );
 }
+//class App extends Component{
+
+//  render(){
+//    return <div>
+//      <Container/>
+//      </div>
+//  }
+//}
+
 
 export default App;
