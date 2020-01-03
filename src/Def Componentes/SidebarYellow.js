@@ -3,7 +3,7 @@
 
 import React, {Component} from "react";
 import "./SidebarYellow.css";
-// import HomeButton from "../img/Home.png"
+import HomeButton from "../img/Home.png"
 
 
 class YellowSidebar extends Component{
@@ -14,7 +14,7 @@ class YellowSidebar extends Component{
             <div className="symbologyOrders">
                 <h3 className="symbologyTitle">Simbología Pedidos</h3>
             </div>
-            <button className="btnHome"><img className="imgBtnHome" src=""/></button>
+            <button className="btnHome"><img className="imgBtnHome" src={HomeButton}/></button>
         </div>
         )
     }
