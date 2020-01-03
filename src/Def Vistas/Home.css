@@ -1,0 +1,39 @@
+.container {
+  width: 1024px;
+  height: 768px;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerButtons{
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+  
+.home-img {
+  width: 50%;
+  align-self: flex-end;
+}
+  
+.btn-blue {
+  background: #0061bf;
+  color: #ffffff;
+  border: 5px solid #232323;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  width: 150px;
+  height: 50px;
+  padding: 15px;
+  font-weight: bold;
+  margin: 50% 0% 5% 2%;
+  text-decoration: none;
+}
+  
+.btn-blue:hover{
+  background: #ffcc00;
+  color: #232323;
+}

@@ -1,18 +1,24 @@
-
 /* BARRA MEDIA BLANCA QUE CONTIENE EL MENÚ */
-.containerMenu{
+.containerMenuWhite{
     width: 60%;
+    height: 720px;
     padding-left: 4%;
     padding-right: 3%;
     padding-top: 5%;
-    background-color: white;
-    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 /* CONTENEDOR DE BOTONES DESAYUNO Y ALMUERZO */
-.containerButtons{
+.containerButtonsMenu{
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    align-self: flex-start;
+    margin-top: 30px;
+    margin-bottom:30px ;
 }
 
 .btn{
