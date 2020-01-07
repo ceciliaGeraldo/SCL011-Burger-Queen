@@ -21,7 +21,7 @@ class Home extends Component {
     
         <div className="container">
           
-          <LinkButton to="/breakfast-menu" id="btn-waitter" className="btn-blue">
+          <LinkButton to="/waiter-view" id="btn-waitter" className="btn-blue">
           Mesero/a
           </LinkButton>
           
