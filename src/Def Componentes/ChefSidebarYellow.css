@@ -1,0 +1,24 @@
+/* BARRA AMARILLA LATERAL DERECHA CON LOS PEDIDOS LISTOS PARA RETIRAR POR EL MESERO*/
+
+.chefSidebarYellow{
+    width: 150px;
+    height: 768px;
+    margin: 0px;
+    padding: 0 5px 0 5px;
+    background-color: #FFCC00;
+    border-bottom-left-radius: 20px;
+    order: 1;
+}
+
+.btnHome{
+    width: 60px;
+    height: 45px;
+    margin-left: 40px;
+    background: #0061BF;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    position: fixed;
+    bottom: 40px;
+}

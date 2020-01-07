@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./Home.css";
 import homeImg from "../img/home-img.png";
 import WaiterView from "./Waiter.js";
+import ChefView from "./Chef.js"
 
 
 function Home() {
@@ -21,6 +22,7 @@ function Home() {
       </div>
 
       <Route exact path="/Waiter" component={WaiterView}/>
+      <Route exact path="/Chef" component={ChefView}/>
     </Router>
   );
 }
