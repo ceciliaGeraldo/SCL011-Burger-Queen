@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./Home.css";
 import homeImg from "../img/home-img.png";
 import WaiterView from "./Waiter.js";
-import ChefView from "./Chef.js"
+import ChefView from "./Chef.js";
 
 
 function Home() {
@@ -18,7 +18,6 @@ function Home() {
         <Link to="/Chef"><button className="btn-blue">Jefe/a de cocina</button></Link>
         </div>
         <img className="home-img" alt="home-img" src={homeImg} />
-      
       </div>
 
       <Route exact path="/Waiter" component={WaiterView}/>
