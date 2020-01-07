@@ -3,8 +3,8 @@ import "./App.css";
 import { useFirebaseApp } from "reactfire";
 //import LunchMenu from "./views/LunchMenu";
 import BreakfastMenu from "./views/BreakfastMenu";
-import Home from "./components/Home";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Home from "./views/Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const firebase = useFirebaseApp();
@@ -12,16 +12,11 @@ function App() {
 
   return (
     <Router>
-      <div className="root">
-        <Switch>
+      <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
-        <Route path="/home/breakfast-menu" component={BreakfastMenu} />
-        
+        <Route path="/breakfast-menu" component={BreakfastMenu} />
       </Switch>
-      </div>
-
-
     </Router>
   );
 }

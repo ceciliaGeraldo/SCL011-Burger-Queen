@@ -7,7 +7,7 @@
     color: #232323;
     margin-top: 30px;
 }
-/* BARRA MEDIA BLANCA QUE CONTIENE EL MENÚ */
+/* BARRA MEDIA BLANCA QUE CONTIENE EL MENÚ 
 .containerMenu{
     width: 60%;
     padding-left: 4%;
@@ -15,4 +15,10 @@
     padding-top: 5%;
     background-color: white;
     border-bottom-left-radius: 20px;
+
+    */
+
+.cien{
+    display: flex;
+    flex-direction: row;
 }
