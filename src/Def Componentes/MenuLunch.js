@@ -4,6 +4,7 @@
 import React, { Component } from "react";
 import MenuCards from "./MenuCards.js";
 import Data from "../data/menu.json";
+import "./MenuLunch.css";
 
 class MenuLunch extends Component {
   constructor(props) {
@@ -86,18 +87,25 @@ class MenuLunch extends Component {
     });
 
     return (
-      <div>
-          <h3>Comida</h3>
+      <div className="containerCardsBreakfast">
+        <h3 className="title">Comida</h3>
+        <div className="menuContainer">
           {food}
-          <h3>Agregados</h3>
+        </div>
+        <h3 className="title">Agregados</h3>
+        <div className="menuContainer">
           {aggregates}
-        
+        </div>
 
-        <h3>Acompañamientos</h3>
+        <h3 className="title">Acompañamientos</h3>
+        <div className="menuContainer">
         {accompaniments}
-
-        <h3>Bebestible</h3>
+        </div>
+        
+        <h3 className="title">Bebestible</h3>
+        <div className="menuContainer">
         {drinks}
+        </div>
       </div>
     );
   }

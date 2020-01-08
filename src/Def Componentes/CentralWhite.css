@@ -2,13 +2,17 @@
 .containerMenuWhite{
     width: 60%;
     height: 715px;
-    padding-left: 4%;
-    padding-right: 3%;
-    padding-top: 5%;
+    padding: 5% 3% 5% 4%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
 
+.containerCards{
+    width: 100%;
+    display: flex;
+    flex-direction: nowrap;
+    overflow: auto;
 }
 
 /* CONTENEDOR DE BOTONES DESAYUNO Y ALMUERZO */

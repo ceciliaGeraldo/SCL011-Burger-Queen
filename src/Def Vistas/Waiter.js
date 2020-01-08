@@ -34,6 +34,7 @@ class WaiterView extends Component {
     });
     console.log(productsAdded);
   };
+
   deleteProduct = (index, e) => {
     let productToDelete = this.state.orders;
     this.setState({
@@ -50,15 +51,15 @@ class WaiterView extends Component {
     });
   };
 
-  componentDidMount() {
-    db.collection("customersAndOrders").onSnapshot((snapShots) => {
-        this.setState({
-            orders: snapShots.docs.map(doc => {
-                return { id: doc.id, data: doc.data() }
-            })
-        })
-    })
-}
+//   componentDidMount() {
+//     db.collection("customersAndOrders").onSnapshot((snapShots) => {
+//         this.setState({
+//             orders: snapShots.docs.map(doc => {
+//                 return { id: doc.id, data: doc.data() }
+//             })
+//         })
+//     })
+// }
 
 /* Funciones para enviar inputs a firebase */
 changeValueName = (e) => {
@@ -74,9 +75,9 @@ changeValueNumber = (e) => {
 }
 
 action = () => {
-    const { inputName, inputNumber } = this.state;
+    const { orders, inputName, inputNumber } = this.state;
     db.collection("customersAndOrders").add({
-        orders: { inputName, inputNumber }
+        orders: { inputName, inputNumber, orders }
     }).then(() => {
         console.log("agregado");
     }).catch(() => {
@@ -86,8 +87,13 @@ action = () => {
 
   render() {
     const orderTotal = this.state.orders.map((e, index)=>
-    <p key = {index} productName={e.productName} productPrice={e.productPrice}>
-      {e.productName} - {e.productPrice} <button  onClick={()=>{this.deleteProduct(index,e)}} >x</button>
+    <p 
+    key = {index} 
+    productName={e.productName} 
+    productPrice={e.productPrice}>
+      {e.productName}  ${e.productPrice} 
+      <button className="deleteOrder"
+      onClick={()=>{this.deleteProduct(index,e)}} >x</button>
     </p>
     )
     return (

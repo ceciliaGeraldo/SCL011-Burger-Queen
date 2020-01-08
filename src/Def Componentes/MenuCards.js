@@ -10,7 +10,7 @@ class MenuCards extends Component {
         return <button className="cardMenu" onClick={this.props.handleClick.bind(this, name, price)} >
             <img src={img} alt="menu-icon" className="imgMenu"></img>
             <h1 className="name">{name}</h1>
-            <h1 className="price">{price}</h1>
+            <h1 className="price">$ {price}</h1>
             </button>
     }
 }

@@ -16,8 +16,8 @@ class BlueSidebar extends Component {
                 changeValueNumber={this.props.changeValueNumber}/>
                 <h1 className="orderNumber">Pedido Nº</h1>
                 <div>
-                    <span>{this.props.totalOrder}</span>
-                    <p>Total: ${this.props.total}</p>
+                    <span className="orderList">{this.props.totalOrder}</span>
+                    <p className="totalOrderList">Total: ${this.props.total}</p>
                     <button className="btnKitchen" onClick={this.props.action}>Enviar a Cocina</button>
                 </div>
             </div>
