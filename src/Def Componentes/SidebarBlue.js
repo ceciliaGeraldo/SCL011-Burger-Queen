@@ -4,20 +4,26 @@
 import React, { Component } from 'react';
 import './SidebarBlue.css';
 import Inputs from "./InputsOrders.js";
-import db from "../firebaseConfig.js"
 
 class BlueSidebar extends Component {
-
-
     render() {
         return (
             <div className="sidebarBlue">
-                <Inputs />
+                <Inputs 
+                clientName={this.props.clientName} 
+                clientTable={this.props.clientTable}
+                changeValueName={this.props.changeValueName}
+                changeValueNumber={this.props.changeValueNumber}/>
                 <h1 className="orderNumber">Pedido Nº</h1>
-                <button className="btnKitchen" onClick={this.action}>Enviar a Cocina</button>
+                <div>
+                    <span>{this.props.totalOrder}</span>
+                    <p>Total: ${this.props.total}</p>
+                    <button className="btnKitchen" onClick={this.props.action}>Enviar a Cocina</button>
+                </div>
             </div>
         )
     }
 }
+        
 
 export default BlueSidebar;

@@ -97,7 +97,7 @@
   
       },
       {
-        "id" : 11,
+        "id" : 12,
         "name": "Bebida 750ml",
         "price" : 1000,
         "category": "Bebestible",
@@ -105,14 +105,14 @@
   
       },
       {
-        "id" : 12,
+        "id" : 13,
         "name": "Queso",
         "price" : 1000,
         "category": "Agregados",
         "img": "https://firebasestorage.googleapis.com/v0/b/k1ltr4squeen.appspot.com/o/A03.png?alt=media&token=71ffc3f4-3c89-4013-8dd4-3d18ae8a599c"
       },
       {
-        "id" : 13,
+        "id" : 14,
         "name": "Huevos",
         "price" : 1000,
         "category": "Agregados",
