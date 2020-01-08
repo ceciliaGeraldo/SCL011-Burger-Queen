@@ -2,9 +2,11 @@
 /* Botón mesero, botón jefe de cocina e imagen */
 
 import React from "react";
-import { BrowserRouter as Router, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import "./Home.css";
 import homeImg from "../img/home-img.png";
+import WaiterView from "./Waiter.js";
+import ChefView from "./Chef.js";
 
 function Home() {
   return (
@@ -21,6 +23,8 @@ function Home() {
           </div>
           <img className="home-img" alt="home-img" src={homeImg} />
         </div>
+        <Route exact path="/Waiter" component={WaiterView} />
+        <Route exact path="/Chef" component={ChefView} />
       </Switch>
     </Router>
   );

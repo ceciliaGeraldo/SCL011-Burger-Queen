@@ -17,6 +17,7 @@ class YellowSidebar extends Component{
             </div>
             <Link to="/home" ><button className="btnHome"><img className="imgBtnHome" src={HomeButton}/></button></Link>
             
+            
         </div>
         )
     }

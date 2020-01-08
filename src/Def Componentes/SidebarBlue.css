@@ -1,7 +1,7 @@
 /* BARRA LATERAL AZUL QUE CONTIENE EL PEDIDO ACTIVO */
 .sidebarBlue{
     width: 20%;
-    height: 740px;
+    height: 735px;
     padding: 3% 3% 0 3%;
     background-color: #0061BF;
     border-top-left-radius: 20px;
