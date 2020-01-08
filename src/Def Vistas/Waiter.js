@@ -50,15 +50,15 @@ class WaiterView extends Component {
     });
   };
 
-  componentDidMount() {
-    db.collection("customersAndOrders").onSnapshot((snapShots) => {
-        this.setState({
-            orders: snapShots.docs.map(doc => {
-                return { id: doc.id, data: doc.data() }
-            })
-        })
-    })
-}
+//   componentDidMount() {
+//     db.collection("customersAndOrders").onSnapshot((snapShots) => {
+//         this.setState({
+//             orders: snapShots.docs.map(doc => {
+//                 return { id: doc.id, data: doc.data() }
+//             })
+//         })
+//     })
+// }
 
 /* Funciones para enviar inputs a firebase */
 changeValueName = (e) => {
@@ -74,9 +74,9 @@ changeValueNumber = (e) => {
 }
 
 action = () => {
-    const { inputName, inputNumber } = this.state;
+    const { orders, inputName, inputNumber } = this.state;
     db.collection("customersAndOrders").add({
-        orders: { inputName, inputNumber }
+        orders: { inputName, inputNumber, orders }
     }).then(() => {
         console.log("agregado");
     }).catch(() => {
