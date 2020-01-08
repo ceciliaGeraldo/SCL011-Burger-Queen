@@ -34,6 +34,7 @@ class WaiterView extends Component {
     });
     console.log(productsAdded);
   };
+
   deleteProduct = (index, e) => {
     let productToDelete = this.state.orders;
     this.setState({
@@ -86,8 +87,13 @@ action = () => {
 
   render() {
     const orderTotal = this.state.orders.map((e, index)=>
-    <p key = {index} productName={e.productName} productPrice={e.productPrice}>
-      {e.productName} - {e.productPrice} <button  onClick={()=>{this.deleteProduct(index,e)}} >x</button>
+    <p 
+    key = {index} 
+    productName={e.productName} 
+    productPrice={e.productPrice}>
+      {e.productName}  ${e.productPrice} 
+      <button className="deleteOrder"
+      onClick={()=>{this.deleteProduct(index,e)}} >x</button>
     </p>
     )
     return (

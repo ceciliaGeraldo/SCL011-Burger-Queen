@@ -4,6 +4,7 @@
 import React, {Component} from "react";
 import MenuCards from './MenuCards.js';
 import Data from "../data/menu.json";
+import "./MenuBreakfast.css"
 
 
 class MenuBreakfast extends Component {
@@ -54,10 +55,10 @@ class MenuBreakfast extends Component {
           })
 
           return(
-            <div >
-            <h3>Bebestible</h3>
+            <div>
+            <h3 className="title">Bebestible</h3>
             {drinks}
-            <h3>Comida</h3>
+            <h3 className="title">Comida</h3>
             {food} 
             </div>
             );
