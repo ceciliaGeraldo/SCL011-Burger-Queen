@@ -3,7 +3,8 @@
 
 import React, {Component} from 'react';
 import './SidebarBlue.css';
-import Inputs from "./InputsOrders.js";
+import Inputs from "./InputsOrder.js";
+
 
 class BlueSidebar extends Component {
 
@@ -19,3 +20,5 @@ class BlueSidebar extends Component {
 }
 
 export default BlueSidebar;
+
+
