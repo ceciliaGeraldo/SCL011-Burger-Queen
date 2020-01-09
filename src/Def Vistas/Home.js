@@ -10,8 +10,7 @@ import ChefView from "./Chef.js";
 
 function Home() {
   return (
-    <Router>
-      <Switch>
+
         <div className="container">
           <div className="containerButtons">
             <Link to="/waiter-view">
@@ -23,10 +22,6 @@ function Home() {
           </div>
           <img className="home-img" alt="home-img" src={homeImg} />
         </div>
-        <Route exact path="/waiter-view" component={WaiterView} />
-        <Route exact path="/chef-view" component={ChefView} />
-      </Switch>
-    </Router>
   );
 }
 

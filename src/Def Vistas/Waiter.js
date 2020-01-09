@@ -51,64 +51,64 @@ class WaiterView extends Component {
     });
   };
 
-//   componentDidMount() {
-//     db.collection("customersAndOrders").onSnapshot((snapShots) => {
-//         this.setState({
-//             orders: snapShots.docs.map(doc => {
-//                 return { id: doc.id, data: doc.data() }
-//             })
-//         })
-//     })
-// }
+  //   componentDidMount() {
+  //     db.collection("customersAndOrders").onSnapshot((snapShots) => {
+  //         this.setState({
+  //             orders: snapShots.docs.map(doc => {
+  //                 return { id: doc.id, data: doc.data() }
+  //             })
+  //         })
+  //     })
+  // }
 
-/* Funciones para enviar inputs a firebase */
-changeValueName = (e) => {
+  /* Funciones para enviar inputs a firebase */
+  changeValueName = (e) => {
     this.setState({
-        inputName: e.target.value,
+      inputName: e.target.value,
     })
-}
+  }
 
-changeValueNumber = (e) => {
+  changeValueNumber = (e) => {
     this.setState({
-        inputNumber: e.target.value,
+      inputNumber: e.target.value,
     })
-}
+  }
 
-action = () => {
+  action = () => {
     const { orders, inputName, inputNumber } = this.state;
     db.collection("customersAndOrders").add({
-        orders: { inputName, inputNumber, orders }
+      orders: { inputName, inputNumber, orders }
     }).then(() => {
-        console.log("agregado");
+      console.log("agregado");
     }).catch(() => {
-        console.log("error");
+      console.log("error");
     })
-}
+  }
 
   render() {
-    const orderTotal = this.state.orders.map((e, index)=>
-    <p 
-    key = {index} 
-    productName={e.productName} 
-    productPrice={e.productPrice}>
-      {e.productName}  ${e.productPrice} 
-      <button className="deleteOrder"
-      onClick={()=>{this.deleteProduct(index,e)}} >x</button>
-    </p>
-    )
+    const orderTotal = this.state.orders.map((e, index) =>
+      <p
+        key={index}
+        productName={e.productName}
+        productPrice={e.productPrice}>
+        {e.productName}  ${e.productPrice}
+        <button className="deleteOrder"
+          onClick={() => { this.deleteProduct(index, e) }} >x</button>
+      </p>)
+      
     return (
       <div className="container">
         <YellowSidebar />
-         {/* le pasamos como prop handleClick para volver a pasárselo a través del route a los componentes hijos 'MenuLunch y MenuBreakfast'*/}
-        <CentralWhite handleClick={this.handleClick}/>
-        <BlueSidebar 
-        total={this.state.orderPrice} 
-        totalOrder={orderTotal} 
-        action={this.action}
-        clientName={this.state.inputName} 
-        clientTable={this.state.inputNumber}
-        changeValueName={this.changeValueName}
-        changeValueNumber={this.changeValueNumber} />
+        {/* le pasamos como prop handleClick para volver a pasárselo a través del route a los componentes hijos 'MenuLunch y MenuBreakfast'*/}
+        <CentralWhite handleClick={this.handleClick} />
+        <BlueSidebar
+          total={this.state.orderPrice}
+          totalOrder={orderTotal}
+          action={this.action}
+          clientName={this.state.inputName}
+          clientTable={this.state.inputNumber}
+          changeValueName={this.changeValueName}
+          changeValueNumber={this.changeValueNumber} />
       </div>
     );
   }
