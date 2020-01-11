@@ -73,16 +73,40 @@ changeValueNumber = (e) => {
         inputNumber: e.target.value,
     })
 }
-
+emptyAll = () =>{
+  // return(
+  //   this.setState.inputName= "",
+  // this.setState.inputNumber = "",
+  // this.setState.orders = [],
+  // this.setState.orderPrice = 0
+  // );
+  this.setState({
+    orders: [],
+    inputNumber: "",
+    inputName: ""
+  }
+    )
+}
 action = () => {
     const { orders, inputName, inputNumber } = this.state;
     db.collection("customersAndOrders").add({
         orders: { inputName, inputNumber, orders }
     }).then(() => {
         console.log("agregado");
+        this.setState({
+          orders: [],
+          inputNumber: "",
+          inputName: "",
+          orderPrice: 0
+
+        })
+        
     }).catch(() => {
         console.log("error");
     })
+    
+    
+    
 }
 
   render() {
