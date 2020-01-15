@@ -16,8 +16,6 @@ class YellowSidebar extends Component{
                 <h3 className="symbologyTitle">Simbología Pedidos</h3>
             </div>
             <Link to="/home" ><button className="btnHome"><img className="imgBtnHome" src={HomeButton}/></button></Link>
-            
-            
         </div>
         )
     }

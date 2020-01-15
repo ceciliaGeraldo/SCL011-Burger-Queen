@@ -88,24 +88,22 @@ class MenuLunch extends Component {
 
     return (
       <div className="containerCardsBreakfast">
-        <h3 className="title">Comida</h3>
-        <div className="menuContainer">
-          {food}
-        </div>
-        <h3 className="title">Agregados</h3>
-        <div className="menuContainer">
-          {aggregates}
+        <div className="two-categories-container">
+          <div id="food-container">
+            <h3 className="title">Comida</h3>
+            <div className="menuContainer">{food}</div>
+          </div>
+          <div id="aggregates-container">
+            <h3 className="title">Agregados</h3>
+            <div className="menuContainer">{aggregates}</div>
+          </div>
         </div>
 
         <h3 className="title">Acompañamientos</h3>
-        <div className="menuContainer">
-        {accompaniments}
-        </div>
-        
+        <div className="menuContainer">{accompaniments}</div>
+
         <h3 className="title">Bebestible</h3>
-        <div className="menuContainer">
-        {drinks}
-        </div>
+        <div className="menuContainer">{drinks}</div>
       </div>
     );
   }

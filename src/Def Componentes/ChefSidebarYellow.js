@@ -4,6 +4,7 @@
 import React, {Component} from "react";
 import "./ChefSidebarYellow.css";
 import HomeButton from "../img/Home.png"
+import { Link } from "react-router-dom";
 
 class ChefYellowSidebar extends Component{
 
@@ -11,7 +12,7 @@ class ChefYellowSidebar extends Component{
         return(
         <div className="chefSidebarYellow">
             <div className="readyContainer"></div>
-            <button className="btnHome"><img className="imgBtnHome" src={HomeButton}/></button>
+            <Link to="/home"><button className="btnHome"><img className="imgBtnHome" src={HomeButton}/></button></Link>
         </div>
         )
     }

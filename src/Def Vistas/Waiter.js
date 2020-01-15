@@ -3,9 +3,10 @@
 
 import React, { Component } from "react";
 import "./Waiter.css";
-import YellowSidebar from "../Def Componentes/SidebarYellow.js";
-import CentralWhite from "../Def Componentes/CentralWhite.js";
-import BlueSidebar from "../Def Componentes/SidebarBlue.js";
+import YellowSidebar from "../Def Componentes/SidebarYellow";
+import CentralWhite from "../Def Componentes/CentralWhite";
+import BlueSidebar from "../Def Componentes/SidebarBlue";
+import ProteinModal from "../Def Componentes/ProteinModal"
 import db from "../firebaseConfig.js"
 
 class WaiterView extends Component {
@@ -51,48 +52,37 @@ class WaiterView extends Component {
     });
   };
 
-//   componentDidMount() {
-//     db.collection("customersAndOrders").onSnapshot((snapShots) => {
-//         this.setState({
-//             orders: snapShots.docs.map(doc => {
-//                 return { id: doc.id, data: doc.data() }
-//             })
-//         })
-//     })
-// }
+  //   componentDidMount() {
+  //     db.collection("customersAndOrders").onSnapshot((snapShots) => {
+  //         this.setState({
+  //             orders: snapShots.docs.map(doc => {
+  //                 return { id: doc.id, data: doc.data() }
+  //             })
+  //         })
+  //     })
+  // }
 
-/* Funciones para enviar inputs a firebase */
-changeValueName = (e) => {
+  /* Funciones para enviar inputs a firebase */
+  changeValueName = (e) => {
     this.setState({
-        inputName: e.target.value,
+      inputName: e.target.value,
     })
-}
-
-changeValueNumber = (e) => {
-    this.setState({
-        inputNumber: e.target.value,
-    })
-}
-emptyAll = () =>{
-  // return(
-  //   this.setState.inputName= "",
-  // this.setState.inputNumber = "",
-  // this.setState.orders = [],
-  // this.setState.orderPrice = 0
-  // );
-  this.setState({
-    orders: [],
-    inputNumber: "",
-    inputName: ""
   }
-    )
-}
-action = () => {
+
+  changeValueNumber = (e) => {
+    this.setState({
+      inputNumber: e.target.value,
+    })
+  }
+
+  action = () => {
     const { orders, inputName, inputNumber } = this.state;
     db.collection("customersAndOrders").add({
-        orders: { inputName, inputNumber, orders }
+      orders: { inputName, inputNumber, orders }
     }).then(() => {
         console.log("agregado");
+        /* La orden al ser enviar a cocina con éxito, cambiaremos su estado mediante setState, 
+        nunca usar this.state fuera del constructor */
         this.setState({
           orders: [],
           inputNumber: "",
@@ -102,37 +92,34 @@ action = () => {
         })
         
     }).catch(() => {
-        console.log("error");
+      console.log("error");
     })
-    
-    
-    
-}
+  }
 
   render() {
-    const orderTotal = this.state.orders.map((e, index)=>
-    <p 
-    key = {index} 
-    productName={e.productName} 
-    productPrice={e.productPrice}>
-      {e.productName}  ${e.productPrice} 
-      <button className="deleteOrder"
-      onClick={()=>{this.deleteProduct(index,e)}} >x</button>
-    </p>
-    )
+    const orderTotal = this.state.orders.map((e, index) =>
+      <p
+        key={index}
+        productName={e.productName}
+        productPrice={e.productPrice}>
+        {e.productName}  ${e.productPrice}
+        <button className="deleteOrder"
+          onClick={() => { this.deleteProduct(index, e) }} >x</button>
+      </p>)
+      
     return (
       <div className="container">
         <YellowSidebar />
-         {/* le pasamos como prop handleClick para volver a pasárselo a través del route a los componentes hijos 'MenuLunch y MenuBreakfast'*/}
-        <CentralWhite handleClick={this.handleClick}/>
-        <BlueSidebar 
-        total={this.state.orderPrice} 
-        totalOrder={orderTotal} 
-        action={this.action}
-        clientName={this.state.inputName} 
-        clientTable={this.state.inputNumber}
-        changeValueName={this.changeValueName}
-        changeValueNumber={this.changeValueNumber} />
+        {/* le pasamos como prop handleClick para volver a pasárselo a través del route a los componentes hijos 'MenuLunch y MenuBreakfast'*/}
+        <CentralWhite handleClick={this.handleClick} />
+        <BlueSidebar
+          total={this.state.orderPrice}
+          totalOrder={orderTotal}
+          action={this.action}
+          clientName={this.state.inputName}
+          clientTable={this.state.inputNumber}
+          changeValueName={this.changeValueName}
+          changeValueNumber={this.changeValueNumber} />
       </div>
     );
   }
